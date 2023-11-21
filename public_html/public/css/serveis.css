@@ -1,0 +1,234 @@
+@import 'reset.css';
+
+/* HERO CONTENT */
+.contenidor-hero {
+    background: var(--raisin);
+}
+
+.serveis {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.servei-hero h2,
+.servei-hero p {
+    color: var(--white);
+}
+
+.servei-hero p {
+    width: 86%;
+}
+
+.no-gutters>.col,
+.no-gutters>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+/* TARGETES PREU */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 320px;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: var(--raisin);
+    padding: 1.5rem;
+    margin: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: var(--white)
+}
+
+.price {
+    font-size: 2.25rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.desc {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.625;
+    color: rgb(183, 197, 222);
+}
+
+.lists {
+    margin-bottom: 1.5rem;
+    flex: 1 1 0%;
+    color: rgb(183, 197, 222);
+}
+
+.lists .list {
+    margin-bottom: 0.5rem;
+    display: flex;
+    margin-left: 0.5rem
+}
+
+.action {
+    border: none;
+    outline: none;
+    display: inline-block;
+    border-radius: 6px;
+    background-color: var(--yellow);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--raisin);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+    /* elevar la tarjeta */
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+.action:hover, .action:focus {
+    background-color: var(--white);
+    color: var(--raisin);
+}
+
+.lists li:hover {
+    color: var(--yellow);
+    transition: color 0.2s ease;
+    cursor: default;
+}
+
+
+/* ITEM CONTENT */
+.contenidor-item,
+.contenidor-item-2 {
+    transition: opacity 2s ease, visibility 2s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contenidor-item {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.contenidor-item-2 {
+    background: var(--green);
+    color: var(--raisin);
+}
+
+.servei-item,
+.servei-item-2 {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* LOGOS SERVEIS */
+.logos-serveis.logos-tecnologies {
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.logos-serveis {
+    .logo-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .logo-item.animate__animated.animate__fadeInUp {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .logo-item:hover {
+        scale: 1.3;
+        transition: 0.2s;
+      }
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 1357px) {
+    .targetes {
+        margin: 16px 0px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .serveis,
+    .servei-item,
+    .servei-item-2 {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenidor-hero {
+        padding-bottom: 22px !important;
+    }
+
+    .servei-hero p {
+        width: 100%;
+    }
+
+    .serveis {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servei-gif {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .servei-gif img {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .serveis,
+    .servei-item,
+    .servei-item-2 {
+        max-width: 86%;
+    }
+
+    .logos-serveis.logos-tecnologies {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .titulo-tecnologias {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}

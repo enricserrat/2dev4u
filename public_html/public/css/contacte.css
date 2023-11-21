@@ -1,0 +1,45 @@
+@import 'reset.css';
+
+#contacte {
+    min-width: 548px;
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.campos-requeridos {
+    /* background-color: var(--green);
+    color: var(--raisin); */
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+}
+
+.mensaje-enviado {
+    background-color: var(--green);
+    color: var(--raisin);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 644px) {
+    #contacte {
+        min-height: 0px;
+        min-width: 381px;
+    }
+
+    .py-5 {
+        padding: 0;
+    }
+}
+
+@media (max-width: 342px) {
+    #contacte {
+        min-height: 0px;
+        min-width: 288px;
+    }
+
+    .py-5 {
+        padding: 0;
+    }
+}
