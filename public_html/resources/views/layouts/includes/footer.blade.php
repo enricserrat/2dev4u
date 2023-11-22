@@ -2,7 +2,7 @@
     <footer>
         <div class="social">
             <a href="https://www.instagram.com/2dev4u/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://gitlab.com/2dev4u" target="_blank"><i class="fa-brands fa-gitlab"></i></a>
+            <a href="https://github.com/enricserrat/2dev4u.com" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.facebook.com/profile.php?id=61551779229319" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.tiktok.com/@2dev4u" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
         </div>

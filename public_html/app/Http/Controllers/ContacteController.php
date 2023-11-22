@@ -27,7 +27,7 @@ class ContacteController extends Controller
         ]);
 
         // verificació de reCAPTCHA
-        $secretKey = env('RECAPTCHA_SECRET_KEY');
+        $secretKey = config('services.google.recaptcha_secret_key');
        
         $token = $request->input('recaptcha_token');
 
