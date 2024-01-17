@@ -17,7 +17,7 @@
 
         {{-- made with love --}}
         <div class="made-in-bcn pt-5" style="color: white;">
-            Creat per <a target="_blank" href="https://www.linkedin.com/in/enric-serrat-marc%C3%A9-b885ab204/"><b>Enric Serrat</b></a> amb <span class="love"></span> a Vic, Barcelona
+            Creat per <a target="_blank" href="https://enricserrat.com/"><b>Enric Serrat</b></a> amb <span class="love"></span> a Vic, Barcelona
         </div>
     </footer>
 </div>
