@@ -19,12 +19,13 @@
     <link rel="stylesheet" href="{{ asset('css/serveis.css') }}">
     <!-- vite imports -->
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
-    <!-- google maps api -->
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.maps_api_key') }}&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
     {{-- fontawesome --}}
     <script src="https://kit.fontawesome.com/02ae4acaa4.js" crossorigin="anonymous"></script>
+    <!-- Incluye el CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Incluye el JS de Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 </head>
 
 
@@ -36,10 +37,12 @@
     <main>
 
         {{-- solo se mostrará el banner si la cookie no existe o no tiene el valor 'accepted' o 'rejected' --}}
-        @if (!request()->cookie('cookie_consent') || (request()->cookie('cookie_consent') !== 'accepted' && request()->cookie('cookie_consent') !== 'rejected'))
+        @if (
+            !request()->cookie('cookie_consent') ||
+                (request()->cookie('cookie_consent') !== 'accepted' && request()->cookie('cookie_consent') !== 'rejected'))
             @include('cookie_banner')
         @endif
-        
+
 
         @yield('content')
 
