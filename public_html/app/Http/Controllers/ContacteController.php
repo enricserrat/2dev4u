@@ -47,7 +47,7 @@ class ContacteController extends Controller
         }
 
         // procesar el formulari i enviar el correu
-        Mail::to('info@2dev4u.com')->send(new ContacteMailable($request->all()));
+        Mail::to('info@2dev4u.es')->send(new ContacteMailable($request->all()));
         session()->flash('info', 'Missatge enviat correctament!');
 
         return redirect()->route('contacte.index');

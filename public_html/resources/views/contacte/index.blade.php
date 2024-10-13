@@ -84,16 +84,44 @@
         </form>
     </div>
 
-    <!-- GOOGLE MAP VIC -------------------------------------------------->
-    <section id="map" style="height: 540px;">
-        <gmp-map center="41.93055725097656,2.2544333934783936" zoom="14" map-id="23d2fbd11fb3bf79">
-            <gmp-advanced-marker position="41.93055725097656,2.2544333934783936" title="2dev4u">
-            </gmp-advanced-marker>
-        </gmp-map>
-    </section>
+    <section id="map" style="height: 540px; width: 100%;"></section>
+
 @endsection
 
 @push('scripts')
+    {{-- LEAFLET MAP --}}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-sA+4G5yjL/UXkv0Au+FQ6VIBX6FAi7uoIRxPqm1xOoU=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-oR9VNN7ONa6RyDL1Z0J0Xv1jH+iqOeT73UAX0C1njU4=" crossorigin=""></script>
+
+    <style>
+        .leaflet-tile {
+            filter: hue-rotate(200deg) saturate(1.5) brightness(1);
+        }
+
+        #map {
+            height: 540px;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var map = L.map('map').setView([41.930557, 2.254433], 17); // Nivel de zoom inicial más alto
+
+            // Usamos un proveedor de tiles con estilo minimalista
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 22, // Aumentamos el nivel máximo de zoom
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+            }).addTo(map);
+
+            // Agregar marcador
+            L.marker([41.930557, 2.254433]).addTo(map)
+                .bindPopup('2dev4u<br> Ubicación de la empresa.')
+                .openPopup();
+        });
+    </script>
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.google.recaptcha_site_key') }}"></script>
     <script>
         function onSubmit(token) {
