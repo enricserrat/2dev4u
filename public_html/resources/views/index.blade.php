@@ -421,7 +421,7 @@
 
             // Agregar marcador
             L.marker([41.930557, 2.254433]).addTo(map)
-                .bindPopup('2dev4u<br> Ubicación de la empresa.')
+                .bindPopup('2dev4u<br> Ubicació de l\'empresa.')
                 .openPopup();
         });
     </script>
