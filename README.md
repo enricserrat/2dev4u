@@ -1,4 +1,4 @@
-[![Banner](./2dev4u-banner.jpeg)](https://2dev4u.com/)
+[![Banner](./2dev4u-banner.jpeg)](https://2dev4u.es/)
 
 2dev4u es una página web de una empresa ficticia de desarrollo web y apps que he desarrollado para mejorar mis capacidades como programador y diseñador. Utilicé Laravel 10 en el backend para gestionar formularios, cookies e includes, entre otros aspectos, y apliqué HTML, CSS y Bootstrap 5 para construir un frontend que había diseñado previamente desde cero en Figma. Mi conocimiento de JavaScript también ha avanzado, usándolo para crear un carrusel automático, animaciones al desplazarse y elementos dinámicos en toda la web.
 
