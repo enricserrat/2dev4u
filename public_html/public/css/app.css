@@ -919,3 +919,8 @@ html {
     background-color: #242424fa;
   }
 }
+
+#map {
+    position: relative;
+    z-index: 0;
+}
